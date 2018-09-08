@@ -2,7 +2,7 @@
 from selenium import webdriver
 
 # Using Chrome to access web
-driver = webdriver.Chrome(r"C:\Users\visha\chromedriver")
+driver = webdriver.Chrome(r"C:\Users\visha\chromedriver") #address for the webdriver
 url = 'https://www.youtube.com/feed/trending'
 
 driver.get(url)
@@ -46,19 +46,7 @@ import pandas as pd
 
 'after searching for half an hour i concluded that its easy for dictionaries to save in csv format'
 
-columns = ['Title','View_count','Channel_Name','uploaded_ON']
-dict1 = {'Title':names,'View_count':views,'Channel_Name':channel,'uploaded_ON':time}
+columns = ['Title','View_count','Channel_Name','uploaded_on']
+dict1 = {'Title':names,'View_count':views,'Channel_Name':channel,'uploaded_on':time}
 df = pd.DataFrame(dict1, columns=columns)
-df.to_excel('C:\\Users\\visha\\Desktop\\treding.xlsx',header=True, index=False, encoding='utf-8')
-
-
-    
-    
-    
-
-
-
-
-    
-
-
+df.to_excel('C:\\Users\\visha\\Desktop\\treding.xlsx',header=True, index=False, encoding='utf-8') #address for the downloaded csv file
